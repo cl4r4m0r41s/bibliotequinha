@@ -1,4 +1,4 @@
-package clara.dao;
+package br.edu.fjn.library.dao;
 
 import java.io.IOException;
 
@@ -8,7 +8,7 @@ import br.edu.fjn.library.dao.util.ConnectionFactory;
 import br.edu.fjn.library.model.Customer;
 import br.edu.fjn.library.util.exceptions.LibraryException;
 
-public class CustomerDAO {
+public class GenericDAO{
 
     public void save(Customer customer) {
         EntityManager manager = ConnectionFactory.getEntityManager();
