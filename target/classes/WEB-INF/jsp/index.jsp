@@ -37,7 +37,7 @@
                             <a href="#"><i class="fa fa-fw fa-gear"></i> Configurações </a>
                         </li>
                         <li>
-                            <a href="#"><i class="fa fa-fw fa-power-off"></i> Log Out</a>
+                            <a href="#"><i class="fa fa-fw fa-power-off"></i> Log Out </a>
                         </li>
                     </ul>
                 </li>
@@ -66,7 +66,7 @@
                         <i class="fa fa-dashboard"></i>  <a href="index.jsp">Biblioteca</a>
                     </li>
                     <li class="active">
-                        <i class="fa fa-file"></i> Venda de Consoles e Joysticks
+                        <i class="fa fa-file"></i>Biblioteca Virtual
                     </li>
                 </ol>
             </div>
@@ -79,7 +79,7 @@
 <div class="row">
     <div class="col-lg-12">
         <h1 class="page-header">
-            Gerenciamento de papelaria de livros
+            Gerenciamento de Livros
 
         </h1>
         <ol class="breadcrumb">
@@ -87,7 +87,7 @@
                 <i class="fa fa-dashboard"></i>  <a href="index.jsp">Listagem</a>
             </li>
             <li class="active">
-                <i class="fa fa-file"></i> listagem de livros
+                <i class="fa fa-file"></i>Listagem de livros
             </li>
         </ol>
     </div>
@@ -98,7 +98,7 @@
 
         <div class="panel-body">
 
-            <a  href="add.jsp" class="btn  btn-primary btn-sm fa fa-plus-square-o" >Novo</a>
+            <a  href="add.jsp" class="btn  btn-primary btn-sm fa fa-plus-square-o">Novo</a>
             
         </div>
     </div>
@@ -107,7 +107,7 @@
     <div class="panel panel-default">
         <form action="#" method="post">
             <div class="form-group input-group">
-                <input type="text" class="form-control" name="txtFiltro" placeholder="digite...">
+                <input type="text" class="form-control" name="txtFiltro" placeholder="Digite...">
                                 <span class="input-group-btn"><button class="btn btn-default" type="submit"><i class="fa fa-search"></i></button></span>
                             </div>
         </form>

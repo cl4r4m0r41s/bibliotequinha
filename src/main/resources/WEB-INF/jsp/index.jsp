@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <head>
     <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
-    <title>Biblioteca</title>
+    <title>Biblium</title>
 
     <link href="#" rel="stylesheet">
 
@@ -10,7 +10,6 @@
 </head>
 <body>
     <div id="wrapper">
-
         <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
@@ -19,7 +18,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="../home">
+                <a class="navbar-brand" href="#">
                  Biblioteca
                 </a>
             </div>
@@ -37,9 +36,8 @@
                         <li>
                             <a href="#"><i class="fa fa-fw fa-gear"></i> Configurações </a>
                         </li>
-                        <li class="divider">pensando...</li>
                         <li>
-                            <a href="#"><i class="fa fa-fw fa-power-off"></i> Log Out</a>
+                            <a href="#"><i class="fa fa-fw fa-power-off"></i> Log Out </a>
                         </li>
                     </ul>
                 </li>
@@ -68,7 +66,7 @@
                         <i class="fa fa-dashboard"></i>  <a href="index.jsp">Biblioteca</a>
                     </li>
                     <li class="active">
-                        <i class="fa fa-file"></i> Venda de Consoles e Joysticks
+                        <i class="fa fa-file"></i>Biblioteca Virtual
                     </li>
                 </ol>
             </div>
@@ -81,62 +79,82 @@
 <div class="row">
     <div class="col-lg-12">
         <h1 class="page-header">
-            Sistema de Com�rcio Eletr�nico
-            <small>Admin</small>
+            Gerenciamento de Livros
+
         </h1>
         <ol class="breadcrumb">
             <li>
-                <i class="fa fa-dashboard"></i>  <a href="index.jsp">Biblioteca</a>
+                <i class="fa fa-dashboard"></i>  <a href="index.jsp">Listagem</a>
             </li>
             <li class="active">
-                <i class="fa fa-file"></i> Aqui vai o conte�do de apresenta��o 
+                <i class="fa fa-file"></i>Listagem de livros
             </li>
         </ol>
     </div>
 </div>
+<!-- /.row -->
 <div class="row">
     <div class="panel panel-default">
-        <div class="panel-heading">
-            Consoles
-        </div>
+
         <div class="panel-body">
 
-            <div class="alert ">
-                
-            </div> <!--Como aqui é para add o livro, então trocar para os dados dos-->
-            <form action="#" method="post">
-
-                <div class="col-lg-6">
-
-                    <div class="form-group">
-                        <label>Nome</label>
-                        <input class="form-control" type="text"  name="txtNome"  required />
-                    </div>
-                    <div class="form-group">
-                        <label>Marca</label>
-                        <input class="form-control" type="text"  name="txtMarca"  required />
-                    </div>
-                    <div class="form-group">
-                        <label>Valor</label>
-                        <input class="form-control" type="number"  name="txtValor"  required />
-                    </div>
-
-                    <button class="btn btn-primary btn-sm" type="submit">Salvar</button>
-
-            </form>
+            <a  href="add.jsp" class="btn  btn-primary btn-sm fa fa-plus-square-o">Novo</a>
+            
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="panel panel-default">
+        <form action="#" method="post">
+            <div class="form-group input-group">
+                <input type="text" class="form-control" name="txtFiltro" placeholder="Digite...">
+                                <span class="input-group-btn"><button class="btn btn-default" type="submit"><i class="fa fa-search"></i></button></span>
+                            </div>
+        </form>
+        <div class="panel-body">
+           
+        
+        <div class="table-responsive">
+            <table class="table table-bordered table-hover">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Titulo</th>
+                        <th>Editora</th>
+                        <th>Autor</th>
+                        <th>Avaliação</th>
+                    </tr>
+                </thead>
+                <tbody>
+                   
+                    <tr>
+                        <td>999999</td>
+                        <td>XXXXXXXXXXX</td>
+                        <td>XXXXXX</td>
+                        <td>999,99</td>
+                        <td><a href="upd.jsp?id=" class="btn  btn-primary btn-sm">Alterar</a>
+                            <button class="btn  btn-danger btn-sm" data-toggle="modal" data-target="#myModal" onclick="removeElement();">Excluir</button>  
+                        </td>
+                    </tr>
+                    
+                </tbody>
+            </table>
 
         </div>
 
-
+        </div>
     </div>
-</div>
+        </div>
+                
+                
+    <%@include file="../modalExcluir.jsp" %>  <!--nem tem-->
 </div>
 
 </div>
 
 </div>
 
-<script src="#"></script>
+<script src="../js/bootstrap.min.js"></script>
 
 </body>
 

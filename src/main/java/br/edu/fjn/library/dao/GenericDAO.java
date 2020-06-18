@@ -2,19 +2,22 @@ package br.edu.fjn.library.dao;
 
 import java.io.IOException;
 
+import javax.persistence.Entity;
 import javax.persistence.EntityManager;
+import javax.persistence.EntityManagerFactory;
 
-import br.edu.fjn.library.dao.util.ConnectionFactory;
-import br.edu.fjn.library.model.Customer;
-import br.edu.fjn.library.util.exceptions.LibraryException;
+import org.postgresql.core.ConnectionFactory;
 
-public class GenericDAO{
+import br.edu.fjn.library.dao.*;
+import br.edu.fjn.library.customer.CustomerDB;
 
-    public void save(Customer customer) {
+public class GenericDAO {
+
+    public void save(CustomerDB customerDB) {
         EntityManager manager = ConnectionFactory.getEntityManager();
         try {
             manager.getTransaction().begin();
-            manager.persist(customer);
+            manager.persist(customerDB);
             manager.getTransaction().commit();
         } catch (Exception e) {
             manager.getTransaction().rollback();
@@ -25,11 +28,11 @@ public class GenericDAO{
         }
     }
 
-    public void update(Customer customer) {
+    public void update(CustomerDB customerDB) {
         EntityManager manager = ConnectionFactory.getEntityManager();
         try {
             manager.getTransaction().begin();
-            manager.merge(customer);
+            manager.merge(customerDB);
             manager.getTransaction().commit();
         } catch (Exception e) {
             manager.getTransaction().rollback();
@@ -40,7 +43,7 @@ public class GenericDAO{
         }
     }
 
-    public Customer findById(Integer id) throws LibraryException {
+    public CustomerDB findById(Integer id) throws LibraryException {
 
         if (id == null) {
             throw new LibraryException("Id de cliente inválido. Por favor, verificar!");
@@ -48,7 +51,7 @@ public class GenericDAO{
 
         EntityManager em = ConnectionFactory.getEntityManager();
         try {
-            Customer c = em.find(Customer.class, id);
+            CustomerDB c = em.find(CustomerDB.class, id);
             return c;
         } finally {
             if (em.isOpen() && em.getTransaction().isActive()) {
@@ -57,12 +60,12 @@ public class GenericDAO{
         }
     }
 
-    public void remove(Customer customer) {
+    public void remove(CustomerDB customerDB) {
         EntityManager manager = ConnectionFactory.getEntityManager();
 
         try {
             manager.getTransaction().begin();
-            Customer c = manager.find(Customer.class, customer.getCode());
+            CustomerDB c = manager.find(CustomerDB.class, customerDB.getCode());
             manager.remove(c);
             manager.getTransaction().commit();
         } catch (Exception e) {

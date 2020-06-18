@@ -1,37 +1,37 @@
- */
-package clarax;
+package br.edu.fjn.library.customer;
 
-import br.fjn.edu.pos.web.domain.Customer;
+import br.edu.fjn.library.customer.Cr;
+
 import java.util.ArrayList;
 import java.util.List;
 import javax.enterprise.context.ApplicationScoped;
 
 /**
  *
- * @author leonardo
+ * @author Mateus
  */
 @ApplicationScoped
 public class Cr {
 
-    private List<Customer> dataB;
+    private List<CustomerDB> dataB;
 
     public Cr() {
        this.dataB = new ArrayList<>();
     }
 
-    public void create(Customer customer){
-        this.dataB.add(customer);
+    public void create(CustomerDB customerDB){
+        this.dataB.add(customerDB);
     }
 
-    public Customer findById(String id){
+    public CustomerDB findById(String id){
         return null;
     }
 
-    public List<Customer> list(){
+    public List<CustomerDB> list(){
         return this.dataB;
     }
 
-    public Customer update(Customer customer){
+    public CustomerDB update(CustomerDB customerDB){
         return null;
     }
 

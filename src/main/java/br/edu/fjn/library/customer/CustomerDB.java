@@ -1,52 +1,47 @@
-package clarax;
+package br.edu.fjn.library.customer;
 
-import br.fjn.edu.pos.web.domain.Customer;
 import java.util.ArrayList;
 import java.util.List;
 import javax.enterprise.context.ApplicationScoped;
 
 /**
  *
- * @author leonardo
+ * @author Mateus
  */
 
- //Esta classe implementa com o CustomersRepository, mas a gente não entendeu o que é ainda
-
 @ApplicationScoped
-public class CustomerDB implements CustomersRepository {
+public class CustomerDB implements Cr {
 
-    private List<Customer> dataB;
+    private List<CustomerDB> dataB;
 
-    public CustomersRepositoryAsMemoryDataBase() {
+    public CustomerDB() {
         this.dataB = new ArrayList<>();
         //Fazer conexão com o BD
     }
 
     @Override
-    public void create(Customer customer) {
-        this.dataB.add(customer);
+    public void create(CustomerDB customerDB) {
+        this.dataB.add(customerDB);
     }
 
     @Override
-    public Customer findById(String id) {
-        return dataB.stream()
-                .filter(c -> c.getId().equals(id))
-                .findFirst().orElse(null);
+    public CustomerDB findById(String id) {
+        return dataB.stream().filter(c -> c.getId().equals(id)).findFirst().orElse(null);
     }
 
     @Override
-    public List<Customer> list() {
+    public List<CustomerDB> list() {
         return this.dataB;
     }
 
     @Override
-    public Customer update(Customer customer) {
+    public CustomerDB update(CustomerDB customerDB) {
         for (int i = 0; i < dataB.size(); i++) {
-           if (dataB.get(i).getId().equals(customer.getId())){
-            dataB.set(i, customer);
+           if (dataB.get(i).getId().equals(customerDB.getId())){
+            dataB.set(i, customerDB);
            } 
         }
-        return customer;
+        return customerDB;
     }
 
     @Override
