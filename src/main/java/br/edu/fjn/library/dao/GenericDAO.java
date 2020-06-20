@@ -1,15 +1,8 @@
 package br.edu.fjn.library.dao;
 
-import java.io.IOException;
-
-import javax.persistence.Entity;
-import javax.persistence.EntityManager;
-import javax.persistence.EntityManagerFactory;
-
 import org.postgresql.core.ConnectionFactory;
-
-import br.edu.fjn.library.dao.*;
-import br.edu.fjn.library.customer.CustomerDB;
+import br.edu.fjn.library.components.CustomerDB;
+import javax.persistence.EntityManager;
 
 public class GenericDAO {
 
@@ -39,23 +32,6 @@ public class GenericDAO {
         } finally {
             if (manager.isOpen() && manager.getTransaction().isActive()) {
                 manager.close();
-            }
-        }
-    }
-
-    public CustomerDB findById(Integer id) throws LibraryException {
-
-        if (id == null) {
-            throw new LibraryException("Id de cliente inválido. Por favor, verificar!");
-        }
-
-        EntityManager em = ConnectionFactory.getEntityManager();
-        try {
-            CustomerDB c = em.find(CustomerDB.class, id);
-            return c;
-        } finally {
-            if (em.isOpen() && em.getTransaction().isActive()) {
-                em.close();
             }
         }
     }
