@@ -46,6 +46,6 @@ public class CustomerDB implements Cr {
 
     @Override
     public void delete(String id) {
-        customersDB.removeIf(customer -> customer.getId().equals(id));
+        CustomerDB.removeIf(customer -> customer.getId().equals(id));
     }
 }
