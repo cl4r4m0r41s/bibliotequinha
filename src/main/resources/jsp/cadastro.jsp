@@ -1,6 +1,6 @@
 <% @include file="<!--Adicionar aqui o diretório cabeçalho-->" %>
 <div>
-<h2>Cadastro de usuário</h2>
+<h2>Cadastro de usu�rio</h2>
 <p>
     <!--Adiocionar aqui algo se necessário(dentro dessa div, não necessáriamente nesse parágrafo-->
 </p>
@@ -8,20 +8,17 @@
 <hr>
 <hr>
 <div>
-    <form action="#" method="post">
+    <form action="AuthSession.java" method="post">
         <label for="name">Nome: </label>
         <input id="name" type="text">
         <br><br>
-        <label for="nick">Nick: </label>
-        <input id="nick" type="text">
+        <label for="email">E-mail: </label>
+        <input id="email" type="text">
         <br><br>
-        <label for="mail">E-mail: </label>
-        <input id="mail" type="text">
+        <label for="password">Password: </label>
+        <input id="password" type="text">
         <br><br>
-        <label for="senha">Senha: </label>
-        <input id="senha" type="text">
-        <br><br>
-        <button>Cadatrar</button>
+        <button>Cadastrar</button>
     </form>
 </div>
 <% @include file="<!--Adionar aqui o diretório do rodapé-->" %>

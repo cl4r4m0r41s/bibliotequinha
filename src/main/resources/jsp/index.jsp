@@ -105,7 +105,7 @@
 </div>
 <div class="row">
     <div class="panel panel-default">
-        <form action="#" method="post">
+        <form action="Usuario.java" method="post">
             <div class="form-group input-group">
                 <input type="text" class="form-control" name="txtFiltro" placeholder="Digite...">
                                 <span class="input-group-btn"><button class="btn btn-default" type="submit"><i class="fa fa-search"></i></button></span>
@@ -145,9 +145,6 @@
         </div>
     </div>
         </div>
-                
-                
-    <%@include file="../modalExcluir.jsp" %>  <!--nem tem-->
 </div>
 
 </div>

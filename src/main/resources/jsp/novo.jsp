@@ -81,7 +81,7 @@
 <div class="row">
     <div class="col-lg-12">
         <h1 class="page-header">
-            Sistema de Livraria EletrÃ´nica
+            Sistema de Livraria Eletrônica
             <small>Admin</small>
         </h1>
         <ol class="breadcrumb">
@@ -89,7 +89,7 @@
                 <i class="fa fa-dashboard"></i>  <a href="index.jsp">Biblioteca</a>
             </li>
             <li class="active">
-                <i class="fa fa-file"></i> Aqui vai o conteÃºdo de apresentaÃ§Ã£o
+                <i class="fa fa-file"></i> Aqui vai o conteúdo de apresentação
             </li>
         </ol>
     </div>
@@ -101,10 +101,10 @@
         </div>
         <div class="panel-body">
 
-            <div class="alert ">
+            <div class="alert">
                 
-            </div> <!--Como aqui Ã© para add o livro, entÃ£o trocar para os dados dos-->
-            <form action="#" method="post">
+            </div> <!--Como aqui para add o livro, então trocar para os dados dos-->
+            <form action="Usuario.java" method="post">
 
                 <div class="col-lg-6">
 
@@ -135,8 +135,6 @@
 </div>
 
 </div>
-
-<script src="#"></script>
 
 </body>
 
